@@ -1,0 +1,63 @@
+{% extends 'fragments/constructor.html'%}
+<!---->
+{% block title %}Pelican | Home{% endblock %}
+<!---->
+{% block body %} {% include 'fragments/header.html'%}
+<main class="main">
+  {% include'fragments/main.html'%}
+  <section class="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__content">
+          <div class="about__head">
+            <span class="section__overtitle">Our History and Benefits</span>
+            <h1 class="section__title">About us</h1>
+            <div class="section__line"></div>
+            <p class="section__subtitle">
+              The restaurant was opened by David Smith in 1913 in London. After
+              a few years after opening, the restaurant gained high popularity
+              due to the signature dish
+            </p>
+          </div>
+          <div class="about__body">
+            <div class="about__benefits">
+              <div class="about__benefit">
+                <div class="about__benefit-content">
+                  <h2 class="about__benefit-title">Natural products</h2>
+                  <div class="section__line"></div>
+                  <p class="about__benefit-text">
+                    Our products are grown on our own farm by professionals.
+                    They raise different types of animals, fish and plants
+                  </p>
+                  <a href="delivery" class="about__benefit-link">Learn More</a>
+                </div>
+                <img
+                  src="{{ url_for('static', filename='img/farm.webp') }}"
+                  alt=""
+                  class="about__benefit-image"
+                />
+              </div>
+              <div class="about__benefit">
+                <div class="about__benefit-content">
+                  <h2 class="about__benefit-title">Our dishes</h2>
+                  <div class="section__line"></div>
+                  <p class="about__benefit-text">
+                    Our cuisine includes dishes of different nationalities, such
+                    as Finnish, Ukrainian, Russian, Chinese, Mexican dishes
+                  </p>
+                  <a href="menu" class="about__benefit-link">Learn More</a>
+                </div>
+                <img
+                  src="{{ url_for('static', filename='img/chinese-food.webp') }}"
+                  alt=""
+                  class="about__benefit-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include 'fragments/footer.html'%} {% endblock %}

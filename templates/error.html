@@ -1,0 +1,16 @@
+{% extends 'fragments/constructor.html' %} {% block title %}404{% endblock %} {%
+block body %} {% include 'fragments/header.html'%}
+<main>
+  <section class="error-handler">
+    <div class="container">
+      <div class="error-handler__inner">
+        <div class="error-handler__content">
+          <h1 class="error-handler__title">404!</h1>
+          <p class="error-handler__subtitle">Page not found!</p>
+          <a href="home" class="error-handler__button btn">Go back</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

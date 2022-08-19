@@ -1,0 +1,102 @@
+{% extends 'fragments/constructor.html'%}
+<!---->
+{% block title %}Pelican | Home{% endblock %}
+<!---->
+{% block body %} {% include 'fragments/header.html'%}
+<main class="main">
+  {% include'fragments/main.html'%}
+  <section class="menu">
+    <img
+      src="{{ url_for('static', filename='img/coffee.png') }}"
+      alt=""
+      class="particle"
+    />
+    <div class="container">
+      <div class="menu__inner">
+        <div class="menu__head">
+          <span class="section__overtitle">About our Menu</span>
+          <h1 class="section__title">Our Menu</h1>
+          <div class="section__line"></div>
+          <span class="section__subtitle"
+            >Our cuisine is one of the best and preferred in Europe</span
+          >
+        </div>
+        <div class="menu__body">
+          <div class="menu__body-content">
+            <h2 class="menu__body-title">Pivileges for Visitors</h2>
+            <div class="section__line"></div>
+            <p class="menu__body-text">
+              Every week, promotions, events and competitions are held in our
+              establishments. Each visitor can participate in them
+            </p>
+          </div>
+          <img
+            src="{{ url_for('static', filename='img/events.jpg') }}"
+            alt=""
+            class="menu__body-image"
+          />
+        </div>
+        <div class="menu__footer">
+          <h3 class="section__title">Menu Categories</h3>
+          <div class="section__line"></div>
+          <div class="menu__hidden">
+            <div class="menu__hidden-button">
+                <button onclick="back()" class="back btn">Back</button>
+            </div>
+          </div>
+          <div class="menu__categories">
+            <div class="menu__category">
+              <img
+                src="{{ url_for('static', filename='img/burger.png') }}"
+                alt=""
+                class="menu__category-image"
+              />
+              <h3 class="menu__category-title">Fastfood</h3>
+            </div>
+            <div class="menu__category">
+              <img
+                src="{{ url_for('static', filename='img/steak.png') }}"
+                alt=""
+                class="menu__category-image"
+              />
+              <h3 class="menu__category-title">Hot Dishes</h3>
+            </div>
+            <div class="menu__category">
+              <img
+                src="{{ url_for('static', filename='img/sandwich.png') }}"
+                alt=""
+                class="menu__category-image"
+              />
+              <h3 class="menu__category-title">Snacks</h3>
+            </div>
+            <div class="menu__category">
+              <img
+                src="{{ url_for('static', filename='img/salad.png') }}"
+                alt=""
+                class="menu__category-image"
+              />
+              <h3 class="menu__category-title">Salads</h3>
+            </div>
+            <div class="menu__category">
+              <img
+                src="{{ url_for('static', filename='img/cocktail.png') }}"
+                alt=""
+                class="menu__category-image"
+              />
+              <h3 class="menu__category-title">Beverages</h3>
+            </div>
+            <div class="menu__category">
+                <img
+                  src="{{ url_for('static', filename='img/desserts.png') }}"
+                  alt=""
+                  class="menu__category-image"
+                />
+                <h3 class="menu__category-title">Desserts<h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include 'fragments/footer.html'%} {% endblock %}

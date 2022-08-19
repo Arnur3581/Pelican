@@ -1,0 +1,47 @@
+{% extends 'fragments/constructor.html'%}
+<!---->
+{% block title %}Pelican | Home{% endblock %}
+<!---->
+{% block body %} {% include 'fragments/header.html'%}
+<main class="main">
+  {% include'fragments/main.html'%}
+  <section class="delivery">
+    <div class="container">
+      <div class="delivery__inner">
+        <div class="delivery__head">
+          <span class="section__overtitle">Delivery and our Products</span>
+          <h1 class="section__title">Delivery Service</h1>
+          <div class="section__line"></div>
+          <p class="section__subtitle">
+            We have a service for the delivery of food and raw materials
+          </p>
+        </div>
+        <div class="delivery__body">
+          <div class="delivery__services">
+            <div class="delivery__service">
+              <div class="delivery__service-content">
+                <h2 class="delivery__service-title">Delivery</h2>
+                <div class="section__line"></div>
+                <input type="text" placeholder="Your name" />
+                <br />
+                <input type="text" placeholder="Phone number" />
+                <br />
+                <input type="text" placeholder="Address" />
+                <br />
+                <input type="text" placeholder="Dish" />
+                <br />
+                <button type="submit" class="btn">Order</button>
+              </div>
+              <img
+                src="{{ url_for('static', filename='img/farm.webp') }}"
+                alt=""
+                class="delivery__content-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% include 'fragments/footer.html'%} {% endblock %}
